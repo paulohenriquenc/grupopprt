@@ -20,9 +20,9 @@ Link do dataset escolhido: [League of Legends Worlds (2011-2022) Stats](https://
 
 <hr>
 
-
+<h1> Instalação </h1>
 <div style="text-align: justify;">
-<p>inicie o docker e digite <code>docker-compose up -d no diretorio raiz do projeto</code></p>
+<p>inicie o docker e digite <code>docker-compose up -d</code> no diretorio raiz do projeto</p>
 
 <p>Após isso digite <code>docker-compose exec mysql mysql -uroot -proot loldb</code> </p>
 
