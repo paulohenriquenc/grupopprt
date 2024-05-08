@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: loldb
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./DDL/lolscript.sql:/docker-entrypoint-initdb.d/lolscript.sql
