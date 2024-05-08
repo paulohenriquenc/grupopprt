@@ -3,7 +3,7 @@
 <hr>
 <h1> League of Legends Worlds Stats </h1>
 <p> O dataset escolhido para realizar este trabalho foi o *League of Legends Worlds (2011-2022) Stats*, este banco possui diversos dados à respeito dos times e jogadores do Campeonato Mundial de League of Legends dos anos de 2011 até 2022.</p>
-![image](https://github.com/paulohenriquenc/grupopprt/assets/83928123/f41c6c15-ac12-46c8-80dc-e1abd8d8d4df)
+(https://github.com/paulohenriquenc/grupopprt/assets/83928123/f41c6c15-ac12-46c8-80dc-e1abd8d8d4df)
 
 
 <hr>
