@@ -1,24 +1,24 @@
-create database loldb;
+create database IF NOT EXISTS loldb;
 use loldb;
 
-CREATE TABLE Season (
+CREATE TABLE IF NOT EXISTS Season (
     season_id INT AUTO_INCREMENT PRIMARY KEY,
     nome INT NOT NULL
 );
-CREATE TABLE Player (
+CREATE TABLE IF NOT EXISTS Player (
     player_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
-CREATE TABLE Team (
+CREATE TABLE IF NOT EXISTS Team (
     team_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
-CREATE TABLE Place (
+CREATE TABLE IF NOT EXISTS Place (
     place_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE Season_team_player (
+CREATE TABLE IF NOT EXISTS Season_team_player (
     season_id INT NOT NULL,
     place_id INT NOT NULL,
     team_id INT NOT NULL,
