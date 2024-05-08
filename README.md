@@ -16,4 +16,4 @@ Link do dataset escolhido: [League of Legends Worlds (2011-2022) Stats](https://
 
 <h1> Modelo lógico </h1>
 
-![Imagem League of Legends](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/stats.png)
+![Imagem League of Legends](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/current_conceptual_model/stats.png)
