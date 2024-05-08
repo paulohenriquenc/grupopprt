@@ -3,7 +3,7 @@ use loldb;
 
 CREATE TABLE Season (
     season_id INT AUTO_INCREMENT PRIMARY KEY,
-    name INT NOT NULL
+    nome INT NOT NULL
 );
 CREATE TABLE Player (
     player_id INT AUTO_INCREMENT PRIMARY KEY,
