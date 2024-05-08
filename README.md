@@ -17,3 +17,14 @@ Link do dataset escolhido: [League of Legends Worlds (2011-2022) Stats](https://
 <h1> Modelo lógico </h1>
 
 ![Imagem League of Legends](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/current_conceptual_model/Model.png)
+
+<hr>
+
+
+<div style="text-align: justify;">
+<p>inicie o docker e digite <code>docker-compose up -d no diretorio raiz do projeto</code></p>
+
+<p>Após isso digite <code>docker-compose exec mysql mysql -uroot -proot loldb</code> </p>
+
+<p>para consultar o banco de dados use: <code>use loldb;</code> e <code>show tables;</code> </p>
+</div>
