@@ -4,6 +4,7 @@ import mysql.connector
 db_config = {
     'host': 'localhost',
     'user': 'root',
+    'port': '3307',
     'password': 'root',
     'database': 'loldb'
 }
@@ -14,7 +15,7 @@ cursor = conn.cursor()
 
 df = pd.read_csv('players_stats.csv')
 
-#troca os espaços vazios por "0"
+# Troca os espaços vazios por "0"
 df = df.fillna(0)
 
 def get_or_insert(table_name, column_name, value):
