@@ -24,6 +24,13 @@ Link do dataset escolhido: [League of Legends Worlds (2011-2022) Stats](https://
 <div style="text-align: justify;">
 <p>Inicie o docker e digite <code>docker-compose up -d</code> no diretorio raiz do projeto</p>
 
+<p>o docker-compose criou o banco de dados e agora ele está na porta | 3307 |</p>
+
+<p>execute o arquivo script.py, necessario ter python e instalar as bibliotecas pandas e mysql-connector-python</p>
+
+<p><code>pip install pandaspip</code></p>
+<p><code>pip install mysql-connector-python</code></p>
+
 <p>Após isso digite <code>docker-compose exec mysql mysql -uroot -proot loldb</code> </p>
 
 <p>Para consultar o banco de dados use: <code>use loldb;</code> e <code>show tables;</code> </p>
