@@ -1,37 +1,76 @@
-<h1> Tecnologia escolhida: </h1>
-<div style="text-align: justify;">
-<p>Optamos por usar o Cassandra como tecnologia para esse trabalho. O Cassandra é um banco de dados NoSQL distribuído, projetado para lidar com grandes volumes de dados e operações de alta velocidade. Ele é conhecido por sua escalabilidade e baixa latência, sendo amplamente utilizado em aplicações que exigem alto desempenho e tolerância a falhas.</p>
-</div>
-<hr>
+# Tecnologia escolhida
 
-<h1> League of Legends Worlds Stats </h1>
-<div style="text-align: justify;">
-<p> O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (2011-2022) Stats, este banco possui diversos dados à respeito dos times e jogadores do Campeonato Mundial de League of Legends dos anos de 2011 até 2022.</p>
-</div>
+Optamos por usar o Cassandra como tecnologia para este projeto. O Cassandra é um banco de dados NoSQL distribuído, projetado para lidar com grandes volumes de dados e operações de alta velocidade. Ele é conhecido por sua escalabilidade e baixa latência, sendo amplamente utilizado em aplicações que exigem alto desempenho e tolerância a falhas.
+
+---
+
+# League of Legends Worlds Stats
+
+O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (2011-2022) Stats, que possui diversos dados sobre times e jogadores do Campeonato Mundial de League of Legends dos anos de 2011 até 2022.
 
 ![Imagem League of Legends](https://github.com/paulohenriquenc/grupopprt/assets/83928123/f41c6c15-ac12-46c8-80dc-e1abd8d8d4df)
-Link do dataset escolhido: [League of Legends Worlds (2011-2022) Stats](https://www.kaggle.com/datasets/pedrocsar/league-of-legends-worlds-20112022-stats)
+[Link para o dataset League of Legends Worlds (2011-2022) Stats](https://www.kaggle.com/datasets/pedrocsar/league-of-legends-worlds-20112022-stats)
 
-<hr>
+---
 
-<h1> Modelo lógico </h1>
+# Modelo lógico
 
-![Imagem League of Legends](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/current_conceptual_model/model_image.png)
+![Modelo lógico](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/current_conceptual_model/model_image.png)
 
-<hr>
+---
+# Instalação
 
-<h1> Instalação </h1>
-<div style="text-align: justify;">
-<p>Inicie o docker e digite <code>docker-compose up -d</code> no diretorio raiz do projeto</p>
+## Pré-requisitos
 
-<p>o docker-compose criou o banco de dados e agora ele está na porta | 3307 |</p>
+- [Docker](https://docs.docker.com/get-docker/) - Tenha instalado o Docker.
+- [Docker Compose](https://docs.docker.com/compose/install/) - Tenha instalado o Docker Compose
+- necessario ter python e instalar as bibliotecas pandas e mysql-connector-python
+    ```bash
+    pip install pandaspip 
+    pip install mysql-connector-python
+    ```
 
-<p>execute o arquivo script.py, necessario ter python e instalar as bibliotecas pandas e mysql-connector-python</p>
+## Passos a passo
 
-<p><code>pip install pandaspip</code></p>
-<p><code>pip install mysql-connector-python</code></p>
+1. **Clone o repositório**
 
-<p>Após isso digite <code>docker-compose exec mysql mysql -uroot -proot loldb</code> </p>
+    ```bash
+    git clone https://github.com/paulohenriquenc/grupopprt.git
+    cd grupopprt
+    ```
 
-<p>Para consultar o banco de dados use: <code>use loldb;</code> e <code>show tables;</code> </p>
-</div>
+2. **Suba o [docker-compose](./Docker-Compose.yml)**: fora do container a porta é |3307| dentro é |3306|
+
+    ```bash
+    docker-compose up -d
+    ```
+    - cria o banco de dados a partir de: [lolscript.sql](/DDL/lolscript.sql)
+    
+
+3. **Para verificar o container**
+
+    ```bash
+    docker ps
+    ```
+4. **-Execute [script.py](./script.py)**
+
+    o script irá inserir os dados no banco de dados
+
+5. **Para interagir com o container**: 
+
+    ```bash
+    docker exec -it grupopprt-mysql-1 bash
+    ```
+    *caso não funcione susbstitua grupopprt-mysql-1 pelo nome do container
+   
+6. **para entrar no mysql do container**
+
+    ```bash
+    mysql -uroot -proot loldb
+    ```
+   
+6. **Para parar o container**
+
+    ```bash
+    docker-compose down
+    ```

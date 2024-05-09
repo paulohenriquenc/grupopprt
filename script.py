@@ -4,7 +4,7 @@ import mysql.connector
 db_config = {
     'host': 'localhost',
     'user': 'root',
-    'port': '3307',
+    'port': 3307,
     'password': 'root',
     'database': 'loldb'
 }
@@ -26,6 +26,7 @@ def insert_get(table_name, value):
         return result[0]
     
     cursor.execute(f"INSERT INTO {table_name} (nome) VALUES (%s)", (value,))
+    conn.commit()
     return cursor.lastrowid
 
 try:
@@ -56,7 +57,7 @@ try:
 # Desfaz a alteração em caso de erro
 except Exception as e:
     conn.rollback()
-    print("Ocorreu um erro:", e)
+    print("erro:", e)
 
 
 cursor.close()
