@@ -1,5 +1,5 @@
-create database IF NOT EXISTS loldb;
-use loldb;
+CREATE DATABASE IF NOT EXISTS loldb;
+USE loldb;
 
 CREATE TABLE IF NOT EXISTS Player (
     player_id INT AUTO_INCREMENT PRIMARY KEY,
