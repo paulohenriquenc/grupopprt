@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pandas as pd
 import mysql.connector
 
@@ -18,16 +20,13 @@ df = pd.read_csv('players_stats.csv')
 df.fillna(0, inplace=True)
 
 def insert_get(table_name, value):
-    select_query = "SELECT " + table_name + "_id FROM " + table_name + " WHERE nome = %s"
-    insert_query = "INSERT INTO " + table_name + " (nome) VALUES (%s)"
-
-    cursor.execute(select_query, (value,))
+    cursor.execute("SELECT {}_id FROM {} WHERE nome = %s".format(table_name, table_name), (value,))
     result = cursor.fetchone()
 
     if result:
         return result[0]
-
-    cursor.execute(insert_query, (value,))
+    
+    cursor.execute("INSERT INTO {} (nome) VALUES (%s)".format(table_name), (value,))
     conn.commit()
     return cursor.lastrowid
 
@@ -36,7 +35,7 @@ try:
         place_id = insert_get('Place', row.get('event'))
         team_id = insert_get('Team', row.get('team'))
         player_id = insert_get('Player', row.get('player'))
-
+        
         # Insere os dados 
         cursor.execute(
             """
