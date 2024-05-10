@@ -18,7 +18,7 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
 ![Modelo lógico](https://raw.githubusercontent.com/paulohenriquenc/grupopprt/main/current_conceptual_model/model_image.png)
 
 ---
-# Instalação
+# Banco de dados MYSQL
 
 ## Pré-requisitos
 
@@ -61,7 +61,7 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
     ```bash
     docker exec -it grupopprt-mysql-1 bash
     ```
-    *caso não funcione susbstitua grupopprt-mysql-1 pelo nome do container
+    **caso não funcione substitua grupopprt-mysql-1 pelo nome do container*
    
 6. **para entrar no mysql do container**
 
@@ -74,3 +74,28 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
     ```bash
     docker-compose down
     ```
+
+# Instação do Apache Cassandra
+
+1. **Baixe um arquivo .zip ou .tar.gz no site oficial do [Cassandra](https://cassandra.apache.org/_/download.html)**
+
+2. **Extraia a pasta**
+
+    você pode extrair para um diretorio como: C:\cassandra\
+    
+3. **edite as variaveis de ambiente**
+   
+    pesquise por "variaveis de ambiente"
+   ![enviroment](./install/enviroment.png)
+
+4. **Inicie o cassandra**
+    vá até o diretorio instalado
+   
+    ```bash
+    cd C:\cassandra
+    ```
+    
+
+
+
+
