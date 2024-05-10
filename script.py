@@ -18,18 +18,20 @@ df = pd.read_csv('players_stats.csv')
 df.fillna(0, inplace=True)
 
 def insert_get(table_name, value):
-    cursor.execute("SELECT {}_id FROM {} WHERE nome = %s".format(table_name, table_name), (value,))
-   
+
+    cursor.execute(f"SELECT {table_name}_id FROM {table_name} WHERE nome = %s", (value,))
+    result = cursor.fetchone()
 
     if result:
         return result[0]
     
-    cursor.execute("INSERT INTO {} (nome) VALUES (%s)".format(table_name), (value,))
+    cursor.execute(f"INSERT INTO {table_name} (nome) VALUES (%s)", (value,))
     conn.commit()
     return cursor.lastrowid
 
 try:
     for index, row in df.iterrows():
+
         place_id = insert_get('Place', row.get('event'))
         team_id = insert_get('Team', row.get('team'))
         player_id = insert_get('Player', row.get('player'))
@@ -56,6 +58,7 @@ try:
 except Exception as e:
     conn.rollback()
     print("erro:", e)
+
 
 cursor.close()
 conn.close()
