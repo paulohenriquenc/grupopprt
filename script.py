@@ -44,8 +44,7 @@ try:
                 games_played, wins, loses, kills, deaths, assists,
                 creep_score, gold, damage
             ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """,
-            (
+            """.format(
                 row.get('season'), place_id, team_id, player_id,
                 row.get('games_played'), row.get('wins'), row.get('loses'),
                 row.get('kills'), row.get('deaths'), row.get('assists'),
