@@ -52,7 +52,7 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
     ```bash
     docker ps
     ```
-4. **-Execute [script.py](./script.py)**
+4. **-Execute [script.py](./mysql_script.py)**
 
     o script irá inserir os dados no banco de dados
 
