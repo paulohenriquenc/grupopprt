@@ -86,7 +86,7 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
 3. **edite as variaveis de ambiente**
    
     pesquise por "variaveis de ambiente"
-   ![enviroment](./install/enviroment.png)
+   ![environment](./install/environment.png)
 
 4. **Inicie o cassandra**
     vá até o diretorio instalado
