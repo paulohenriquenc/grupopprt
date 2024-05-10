@@ -18,13 +18,13 @@ df = pd.read_csv('players_stats.csv')
 df.fillna(0, inplace=True)
 
 def insert_get(table_name, value):
-    cursor.execute("SELECT " + table_name + "_id FROM " + table_name + " WHERE nome = %s", (value,))
+    cursor.execute("SELECT {}_id FROM {} WHERE nome = %s".format(table_name, table_name), (value,))
     result = cursor.fetchone()
 
     if result:
         return result[0]
     
-    cursor.execute("INSERT INTO " + table_name + " (nome) VALUES (%s)", (value,))
+    cursor.execute("INSERT INTO {} (nome) VALUES (%s)".format(table_name), (value,))
     conn.commit()
     return cursor.lastrowid
 
