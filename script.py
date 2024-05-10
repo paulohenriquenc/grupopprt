@@ -19,7 +19,7 @@ df.fillna(0, inplace=True)
 
 def insert_get(table_name, value):
     cursor.execute("SELECT {}_id FROM {} WHERE nome = %s".format(table_name, table_name), (value,))
-    result = cursor.fetchone()
+   
 
     if result:
         return result[0]
