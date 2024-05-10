@@ -1,10 +1,28 @@
 services:
   mysql:
-    image: mysql:latest
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: loldb
     ports:
       - "3307:3306"
     volumes:
+      - mysql_data:/var/lib/mysql
       - ./DDL/lolscript.sql:/docker-entrypoint-initdb.d/lolscript.sql
+
+  cassandra:
+    image: cassandra:4.0
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+    environment:
+      CASSANDRA_BROADCAST_ADDRESS: cassandra
+      CASSANDRA_LISTEN_ADDRESS: cassandra
+      CASSANDRA_RPC_ADDRESS: 0.0.0.0
+      CASSANDRA_START_RPC: "true"
+
+volumes:
+  mysql_data:
+  cassandra_data:
