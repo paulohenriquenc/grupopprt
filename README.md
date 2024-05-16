@@ -23,11 +23,11 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
 
 ## Pré-requisitos
 
-- [Cassandra documentação](https://cassandra.apache.org/doc/latest/cassandra/installing/installing.html#prerequisites)
-- [Docker](https://docs.docker.com/get-docker/) - Tenha instalado o Docker.
-- [Docker Compose](https://docs.docker.com/compose/install/) - Tenha instalado o Docker Compose
-- necessario ter [java](https://www.oracle.com/java/technologies/downloads/) SDK 11 ou 17
-- necessario ter [python](https://www.python.org/downloads/) 3.8 - 3.11 e instalar as bibliotecas pandas, mysql-connector-python e cassandra-driver
+- [Documentação do cassandra](https://cassandra.apache.org/doc/latest/cassandra/installing/installing.html#prerequisites)
+- Tenha instalado o [Docker](https://docs.docker.com/get-docker/).
+- Tenha instalado o [Docker Compose](https://docs.docker.com/compose/install/).
+- necessario ter [java](https://www.oracle.com/java/technologies/downloads/) SDK 11 ou 17.
+- necessario ter [python](https://www.python.org/downloads/) 3.8 - 3.11 e instalar as bibliotecas pandas, mysql-connector-python e cassandra-driver.
     ```bash
     pip install pandas
     pip install mysql-connector-python
