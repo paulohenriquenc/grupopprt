@@ -19,7 +19,7 @@ O dataset escolhido para realizar este trabalho foi o League of Legends Worlds (
 ![Modelo lógico](./model/model_image.png)
 
 ---
-# Banco de dados MYSQL
+# Tutorial
 
 ## Pré-requisitos
 
