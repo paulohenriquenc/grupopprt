@@ -12,9 +12,11 @@ db_config = {
 conn = mysql.connector.connect(**db_config)
 cursor = conn.cursor()
 
-df = pd.read_csv('players_stats.csv')
+df = pd.read_csv('../assets/players_stats.csv')
+# Troca NaN por 0
 df.fillna(0, inplace=True)
 
+# insere e/ou copia o id/valor da tabela
 def insert_get(table_name, value):
     cursor.execute("SELECT {}_id FROM {} WHERE nome = %s".format(table_name, table_name), (value,))
     result = cursor.fetchone()
@@ -51,7 +53,7 @@ try:
 
 except Exception as e:
     conn.rollback()
-    print("Erro:", e)
+    print('Erro: ', e)
 
 cursor.close()
 conn.close()

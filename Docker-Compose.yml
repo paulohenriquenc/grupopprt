@@ -7,8 +7,8 @@ services:
     ports:
       - "3307:3306"
     volumes:
+      - ./DDL/mysql_create.sql:/docker-entrypoint-initdb.d/mysql_create.sql
       - mysql_data:/var/lib/mysql
-      - ./DDL/lolscript.sql:/docker-entrypoint-initdb.d/lolscript.sql
 
   cassandra:
     image: cassandra:4.0
