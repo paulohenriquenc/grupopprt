@@ -10,7 +10,7 @@ for row in result:
 
 result = session.execute("SELECT team, player, season, place FROM Performance LIMIT 10")
 for row in result:
-    print(row['team'], row['player'], row['season'], row['place'])
+    print(row.team, row.player, row.season, row.place)
 
 
 session.shutdown()

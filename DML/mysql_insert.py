@@ -12,7 +12,7 @@ db_config = {
 conn = mysql.connector.connect(**db_config)
 cursor = conn.cursor()
 
-df = pd.read_csv('../assets/players_stats.csv')
+df = pd.read_csv('./assets/players_stats.csv')
 # Troca NaN por 0
 df.fillna(0, inplace=True)
 

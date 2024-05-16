@@ -35,7 +35,7 @@ try:
 
     rows = session.execute("SELECT * FROM system_schema.tables WHERE keyspace_name = 'loldb'")
     if rows:
-        print('Tabelas no keyspace "loldb": ')
+        print('Tabelas em keyspace "loldb": ')
         for row in rows:
             print(row.table_name)
     else:
